@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="CivicGuide India: Your interactive guide to Indian elections. Learn about Lok Sabha, Vidhan Sabha, ECI, voter ID, and get AI-powered answers about Indian democracy." />
+  <meta name="author" content="Vivek Sharma" />
+  <meta name="theme-color" content="#0d1117" />
+  <title>CivicGuide — The Interactive Election Assistant</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+  <a href="#main-content" class="skip-link" id="skip-nav">Skip to main content</a>
+
+  <header class="site-header" role="banner" id="site-header">
+    <div class="container header-inner">
+      <a href="/" class="brand" aria-label="CivicGuide Home" id="brand-link">
+        <span class="brand-icon" aria-hidden="true">🗳️</span>
+        <span class="brand-text">Civic<span class="brand-accent">Guide</span></span>
+      </a>
+      <nav class="main-nav" aria-label="Primary navigation" id="primary-nav">
+        <ul class="nav-list" role="list">
+          <li><a href="#timeline-section" class="nav-link" id="nav-timeline"><span class="nav-icon" aria-hidden="true">📅</span> Timeline</a></li>
+          <li><a href="#chat-section" class="nav-link" id="nav-chat"><span class="nav-icon" aria-hidden="true">💬</span> AI Assistant</a></li>
+          <li><a href="#civic-section" class="nav-link" id="nav-civic"><span class="nav-icon" aria-hidden="true">📍</span> Find Info</a></li>
+        </ul>
+      </nav>
+      <button class="mobile-menu-toggle" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="mobile-nav" id="mobile-menu-btn" type="button">
+        <span class="hamburger-line" aria-hidden="true"></span>
+        <span class="hamburger-line" aria-hidden="true"></span>
+        <span class="hamburger-line" aria-hidden="true"></span>
+      </button>
+    </div>
+    <nav class="mobile-nav" aria-label="Mobile navigation" id="mobile-nav" aria-hidden="true">
+      <ul class="mobile-nav-list" role="list">
+        <li><a href="#timeline-section" class="mobile-nav-link" tabindex="-1">📅 Election Timeline</a></li>
+        <li><a href="#chat-section" class="mobile-nav-link" tabindex="-1">💬 AI Assistant</a></li>
+        <li><a href="#civic-section" class="mobile-nav-link" tabindex="-1">📍 Find My Info</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="main-content" role="main">
+    <!-- HERO -->
+    <section class="hero-section" aria-labelledby="hero-heading" id="hero-section">
+      <div class="container hero-inner">
+        <div class="hero-content">
+          <p class="hero-eyebrow" aria-hidden="true">Bharat Ka Loktantra</p>
+          <h1 id="hero-heading" class="hero-title">Understand Every Step of <span class="text-gradient">Indian Elections</span></h1>
+          <p class="hero-description">Navigate the complete Indian election journey — from Voter ID registration to Lok Sabha & Vidhan Sabha results. Get AI-powered answers about ECI, EVMs, and your democratic rights.</p>
+          <div class="hero-actions">
+            <a href="#timeline-section" class="btn btn-primary" id="hero-cta-timeline">Explore the Timeline <span aria-hidden="true">→</span></a>
+            <a href="#chat-section" class="btn btn-secondary" id="hero-cta-chat">Ask the AI Assistant</a>
+          </div>
+        </div>
+        <div class="hero-visual" aria-hidden="true">
+          <div class="hero-graphic" id="hero-graphic">
+            <svg viewBox="0 0 400 400" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" class="hero-svg">
+              <title>Voter Casting Ballot Illustration</title>
+              <defs>
+                <linearGradient id="grad-accent" x1="0%" y1="0%" x2="100%" y2="100%">
+                  <stop offset="0%" stop-color="#FF9933" />
+                  <stop offset="50%" stop-color="#FFFFFF" />
+                  <stop offset="100%" stop-color="#138808" />
+                </linearGradient>
+                <linearGradient id="grad-sweater" x1="0%" y1="0%" x2="0%" y2="100%">
+                  <stop offset="0%" stop-color="#EF4444" />
+                  <stop offset="100%" stop-color="#DC2626" />
+                </linearGradient>
+                <linearGradient id="grad-box" x1="0%" y1="0%" x2="0%" y2="100%">
+                  <stop offset="0%" stop-color="#F59E0B" />
+                  <stop offset="100%" stop-color="#D97706" />
+                </linearGradient>
+                <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+                  <feGaussianBlur stdDeviation="6" result="blur" />
+                  <feComposite in="SourceGraphic" in2="blur" operator="over" />
+                </filter>
+              </defs>
+
+              <!-- Soft background circle -->
+              <circle cx="200" cy="200" r="170" fill="#1a1f2e" opacity="0.6"/>
+
+              <!-- Floating accent particles -->
+              <circle cx="50" cy="90" r="5" fill="#FF9933" class="float-slow" opacity="0.6"/>
+              <circle cx="370" cy="110" r="4" fill="#138808" class="float-fast" opacity="0.7"/>
+              <circle cx="60" cy="310" r="6" fill="#58a6ff" class="float-med" opacity="0.5"/>
+              <circle cx="350" cy="290" r="3" fill="#FF9933" class="float-fast" opacity="0.8"/>
+
+              <!-- Decorative plant leaves (left) -->
+              <path d="M 80 380 Q 50 250 20 200 Q 40 300 80 380 Z" fill="#4B775B" opacity="0.7" class="float-slow"/>
+              <path d="M 100 380 Q 80 220 50 180 Q 70 280 100 380 Z" fill="#2E4638" opacity="0.7" class="float-slow"/>
+
+              <!-- Person Body / Red Sweater -->
+              <path d="M 80 380 C 80 250 130 200 180 200 C 230 200 280 260 280 380 Z" fill="url(#grad-sweater)"/>
+              <!-- Collar detail -->
+              <path d="M 150 200 L 180 230 L 210 200 Z" fill="#FFFFFF" opacity="0.9"/>
+              <path d="M 150 200 Q 180 215 210 200 Z" fill="#1E293B"/>
+
+              <!-- Neck -->
+              <path d="M 165 170 L 165 210 L 195 210 L 195 170 Z" fill="#FCD34D"/>
+              <!-- Head -->
+              <rect x="135" y="80" width="90" height="100" rx="40" fill="#FCD34D"/>
+              
+              <!-- Hair -->
+              <path d="M 125 120 C 125 60 180 40 230 70 C 240 100 230 130 215 130 C 200 100 180 80 135 120 Z" fill="#1E293B"/>
+
+              <!-- Face -->
+              <circle cx="160" cy="140" r="4" fill="#1E293B"/>
+              <circle cx="195" cy="140" r="4" fill="#1E293B"/>
+              <path d="M 170 165 Q 177 175 185 165" fill="none" stroke="#1E293B" stroke-width="3" stroke-linecap="round"/>
+
+              <!-- Arm (behind the box) -->
+              <path d="M 230 260 Q 270 240 310 215" fill="none" stroke="#EF4444" stroke-width="30" stroke-linecap="round" class="arm-move"/>
+
+              <!-- Ballot Box (IN FRONT of person and arm) -->
+              <rect x="250" y="240" width="130" height="140" fill="url(#grad-box)" rx="6" filter="url(#glow)"/>
+              <rect x="240" y="220" width="150" height="25" fill="#D97706" rx="4"/>
+              <!-- Slot -->
+              <rect x="280" y="230" width="70" height="6" fill="#1E293B" rx="3"/>
+              <!-- VOTE text -->
+              <text x="315" y="340" font-family="'Outfit', system-ui, sans-serif" font-weight="900" font-size="24" fill="#FFFFFF" text-anchor="middle" letter-spacing="2">VOTE</text>
+
+              <!-- Ballot Paper dropping into slot (on top of box lid) -->
+              <g class="ballot-paper">
+                <rect x="290" y="145" width="50" height="65" fill="#FFFFFF" stroke="#CBD5E1" stroke-width="2.5" rx="4"/>
+                <line x1="300" y1="160" x2="330" y2="160" stroke="#94A3B8" stroke-width="3" stroke-linecap="round"/>
+                <line x1="300" y1="173" x2="330" y2="173" stroke="#94A3B8" stroke-width="3" stroke-linecap="round"/>
+                <line x1="300" y1="186" x2="318" y2="186" stroke="#94A3B8" stroke-width="3" stroke-linecap="round"/>
+                <path d="M 320 190 L 325 196 L 334 183" fill="none" stroke="#10B981" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/>
+              </g>
+
+              <!-- Hand on top holding the ballot -->
+              <circle cx="315" cy="210" r="14" fill="#FCD34D" class="hand-move"/>
+              
+            </svg>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- TIMELINE -->
+    <section class="timeline-section" aria-labelledby="timeline-heading" id="timeline-section">
+      <div class="container">
+        <header class="section-header">
+          <p class="section-eyebrow">Chunav Prakriya</p>
+          <h2 id="timeline-heading" class="section-title">The Indian Election <span class="text-gradient">Timeline</span></h2>
+          <p class="section-description">Follow the complete journey of an Indian election — from ECI announcement to oath ceremony. Click any step to learn more.</p>
+        </header>
+        <div class="timeline-wrapper" role="list" aria-label="Election process steps" id="timeline-list">
+          <!-- Steps are generated by js/timeline.js -->
+        </div>
+      </div>
+    </section>
+
+    <!-- AI CHAT -->
+    <section class="chat-section" aria-labelledby="chat-heading" id="chat-section">
+      <div class="container">
+        <header class="section-header">
+          <p class="section-eyebrow">AI-Powered</p>
+          <h2 id="chat-heading" class="section-title">Indian Election <span class="text-gradient">Assistant</span></h2>
+          <p class="section-description">Have questions about Lok Sabha, Rajya Sabha, ECI, EVMs, NOTA, or your voting rights? Ask our AI assistant.</p>
+        </header>
+        <div class="chat-container" id="chat-container" role="log" aria-live="polite" aria-label="Chat conversation">
+          <div class="chat-welcome" id="chat-welcome">
+            <div class="chat-welcome-icon" aria-hidden="true">
+              <svg viewBox="0 0 100 100" width="80" height="80" xmlns="http://www.w3.org/2000/svg" class="bot-svg">
+                <circle cx="50" cy="50" r="45" fill="#161b22" stroke="#58a6ff" stroke-width="2"/>
+                <path d="M30 45 Q50 25 70 45" fill="none" stroke="#a855f7" stroke-width="4" stroke-linecap="round"/>
+                <circle cx="35" cy="55" r="5" fill="#58a6ff" class="bot-eye"/>
+                <circle cx="65" cy="55" r="5" fill="#58a6ff" class="bot-eye"/>
+                <path d="M40 70 Q50 75 60 70" fill="none" stroke="#e6edf3" stroke-width="3" stroke-linecap="round"/>
+                <line x1="50" y1="5" x2="50" y2="15" stroke="#58a6ff" stroke-width="3" stroke-linecap="round"/>
+                <circle cx="50" cy="5" r="3" fill="#ec4899" class="bot-antenna"/>
+              </svg>
+            </div>
+            <p class="chat-welcome-text">Namaste! I'm your CivicGuide Assistant. Ask me anything about Lok Sabha, Vidhan Sabha, ECI, voter ID, EVMs, NOTA, and your democratic rights.</p>
+          </div>
+        </div>
+        <form class="chat-input-form" id="chat-form" aria-label="Send a message to the election assistant">
+          <label for="chat-input" class="sr-only">Type your question about elections</label>
+          <div class="chat-input-wrapper">
+            <input type="text" id="chat-input" class="chat-input" placeholder="Ask about Indian elections, Lok Sabha, EVMs, voter ID..." autocomplete="off" maxlength="500" aria-describedby="chat-input-hint" />
+            <span id="chat-input-hint" class="sr-only">Maximum 500 characters. Only election-related questions will be answered.</span>
+            <button type="submit" class="chat-send-btn" id="chat-send-btn" aria-label="Send message"><span aria-hidden="true">➤</span></button>
+          </div>
+          <p class="chat-disclaimer">This AI assistant specializes in Indian elections, ECI, and democratic processes.</p>
+        </form>
+      </div>
+    </section>
+
+    <!-- CIVIC INFO -->
+    <section class="civic-section" aria-labelledby="civic-heading" id="civic-section">
+      <div class="container">
+        <header class="section-header">
+          <p class="section-eyebrow">Jaankari</p>
+          <h2 id="civic-heading" class="section-title">Find Your <span class="text-gradient">Voting Info</span></h2>
+          <p class="section-description">Enter your city, state, or pin code to find your constituency, elected representatives, and upcoming election details.</p>
+        </header>
+        <div class="civic-search-container" id="civic-search-container">
+          <form class="civic-form" id="civic-form" aria-label="Search for voting information by address">
+            <label for="civic-address-input" class="sr-only">Enter your address or zip code</label>
+            <div class="civic-input-wrapper">
+              <span class="civic-input-icon" aria-hidden="true"></span>
+              <input type="text" id="civic-address-input" class="civic-input" placeholder="Enter city, state or pin code (e.g. Delhi, Mumbai, 110001)..." autocomplete="street-address" maxlength="200" aria-describedby="civic-input-hint" />
+              <button type="submit" class="btn btn-primary civic-search-btn" id="civic-search-btn" aria-label="Search for voting information">Search</button>
+            </div>
+            <span id="civic-input-hint" class="sr-only">Enter a city name, state, or 6-digit pin code to find Indian election information.</span>
+          </form>
+        </div>
+        <div class="civic-results" id="civic-results" role="region" aria-labelledby="civic-results-heading" aria-live="polite" hidden>
+          <h3 id="civic-results-heading" class="sr-only">Voting Information Results</h3>
+          <article class="civic-card" id="civic-representatives-card" aria-labelledby="civic-reps-heading">
+            <div class="civic-card-icon" aria-hidden="true">🏛️</div>
+            <h4 id="civic-reps-heading">Your Elected Representatives</h4>
+            <div class="civic-card-content" id="civic-reps-content"></div>
+          </article>
+          <article class="civic-card" id="civic-polling-card" aria-labelledby="civic-polling-heading">
+            <div class="civic-card-icon" aria-hidden="true">📍</div>
+            <h4 id="civic-polling-heading">Your Constituency & Polling</h4>
+            <div class="civic-card-content" id="civic-polling-content"></div>
+          </article>
+          <article class="civic-card" id="civic-election-card" aria-labelledby="civic-election-heading">
+            <div class="civic-card-icon" aria-hidden="true">📅</div>
+            <h4 id="civic-election-heading">Upcoming Indian Elections</h4>
+            <div class="civic-card-content" id="civic-election-content"></div>
+          </article>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer" role="contentinfo" id="site-footer">
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <span class="brand-icon" aria-hidden="true">🗳️</span>
+        <span class="brand-text">Civic<span class="brand-accent">Guide</span></span>
+      </div>
+      <p class="footer-tagline">Empowering citizens through knowledge.</p>
+      <nav class="footer-nav" aria-label="Footer navigation">
+        <ul class="footer-nav-list" role="list">
+          <li><a href="#timeline-section" class="footer-link">Timeline</a></li>
+          <li><a href="#chat-section" class="footer-link">AI Assistant</a></li>
+          <li><a href="#civic-section" class="footer-link">Find Info</a></li>
+        </ul>
+      </nav>
+      <hr class="footer-divider" aria-hidden="true" />
+      <p class="footer-credit">Built by Vivek Sharma</p>
+      <p class="footer-copyright">&copy; 2026 CivicGuide. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="js/utils.js"></script>
+  <script src="js/timeline.js"></script>
+  <script src="js/chat.js"></script>
+  <script src="js/civic.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
